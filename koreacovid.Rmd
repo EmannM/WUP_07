@@ -1,7 +1,7 @@
 ---
 title: "covid 19"
-author: "Dr K"
-date: "5/2/2020"
+author: "Emann Malik"
+date: "April 3, 2021"
 output:
   html_document: default
   pdf_document: default
@@ -15,6 +15,12 @@ require(tigerstats)
 require(lubridate)
 kRdata <- read.csv(file = 'kRdata.csv')
 ```
+  
+```{r include=FALSE}
+kRdata$Sex <- as.factor(kRdata$Sex)
+kRdata$result <- as.factor(kRdata$result)
+```
+  
 ### Data is from the Patient_Info dataset from South Korea 1 Jan to 1 May 
 ### This is contained in a downloadable zip file from kaggle
 
@@ -23,10 +29,10 @@ Some of the data was uncoded for sex - sex must be just male or female
 state of a patient must be died or alive - we adjust that as well   
   
 # Question 1 - Is dying independent of sex
-
-
-
-
+  
+$H_0$ Dying from COVID-19 is independent of sex.  
+$H_A$ Dying from COVID-19 is not independent of sex.  
+  
 Table of patients:
 ```{r}
 
@@ -35,25 +41,13 @@ Table of patients:
 with(kRdata, table(Sex, result))
 
 ```
-
-## We create two bar charts - one based on frequency and the other on percent, use ggplot commands to do this
-
-`
-
   
-
-
-
-
-
+## We create two bar charts - one based on frequency and the other on percent, use ggplot commands to do this
+  
+  
   
 ## Numerical results
 
-
 ## Inferential results 
 
-
-
-
 ## Conclusions
-
