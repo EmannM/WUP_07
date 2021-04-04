@@ -59,7 +59,7 @@ basicCC <- ggplot(dd2,aes(x=result,y=prcnt*100,fill=Sex))
 basicCC + geom_bar(stat="identity", position = "dodge")
 ```
   
-
+The bar plots above show that, out of the people who survived COVID-19, there were more females (56%) than males (44%). Out of the people who did not survive COVID-19, there were more males (64%) than females (36%). The plots show that about twice as many males died from COVID-19 than females; there is an unequal amount of deaths between the two sexes. We are starting to see evidence that a person's sex could play a role in the chances of them dying from COVID-19.
   
 ## Numerical results
   
@@ -69,7 +69,7 @@ rowPerc(table1)
 colPerc(table1)
 ```
   
-
+The tables above show quite a difference among survivals and deaths between males and females. Out of the females, more survived COVID-19 (56%) than those who did not (36%). Out of the males, more died from COVID-19 (64%) than those who survived (44%). More females lived than males and more males died than females. Once again, it appears that the virus is taking a larger toll on male lives.
   
 ## Inferential results 
   
@@ -79,7 +79,15 @@ chisqtestGC(table1)
 fisher.test(table1)
 ```
   
-
+$H_0$ Dying from COVID-19 is independent of sex.     
+$H_A$ Dying from COVID-19 is not independent of sex.    
+  
+The Chi-squared test above displays a p-value of 0.001 while Fisher's Exact Test displays a p-value of 0.0009. Both of these values indicate some sort of significance.
+They, both representing the chance that we will get the same results just received if the null hypothesis is true, are small values.  
+  
+The odds ratio from Fisher's Exact Test, 2.3, is derived from the odds of a male dying (0.031) divided by the odds of a female dying (0.014). It means that males are 2.3 times more likely than females to die from COVID-19.
+  
+So, based on all these values, there is a significant difference between males and females; males are much more likely to die from COVID-19 than females. We can reject the null hypothesis in favor of the alternative: dying from COVID-19 is not independent of sex.
   
 ## Conclusions
   
