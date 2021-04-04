@@ -91,5 +91,5 @@ So, based on all these values, there is a significant difference between males a
   
 ## Conclusions
   
-
+In conclusion, we have found that there is a significant difference between male and female COVID-19 deaths. There is a much greater chance that a male will die from COVID-19 than a female.
   
